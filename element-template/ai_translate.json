@@ -1,0 +1,269 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "AI_Translate",
+  "id": "587156fb-78ed-48f2-bb06-c4a4fca33479",
+  "version": 1,
+  "description": "Interact with ChatGPT To Translate text",
+  "icon": {
+    "contents": "data:image/png;base64,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"
+  },
+  "documentationRef": "https://docs.camunda.io/docs/components/connectors/out-of-the-box-connectors/openai/",
+  "category": {
+    "id": "connectors",
+    "name": "Connectors"
+  },
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "elementType": {
+    "value": "bpmn:ServiceTask"
+  },
+  "groups": [
+    {
+      "id": "authentication",
+      "label": "Authentication"
+    },
+    {
+      "id": "input",
+      "label": "Payload"
+    },
+    {
+      "id": "output",
+      "label": "Response mapping"
+    }
+  ],
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "io.camunda:http-json:1",
+      "binding": {
+        "type": "zeebe:taskDefinition:type"
+      }
+    },
+    {
+      "id": "authenticationType",
+      "value": "bearer",
+      "type": "Hidden",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "authentication.type"
+      }
+    },
+    {
+      "label": "Text To Translate",
+      "type": "Text",
+      "group": "input",
+      "value": "=textToTranslate",
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "textToTranslate"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Language",
+      "type": "Text",
+      "group": "input",
+      "value": "=languageToTranslate",
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "languageToTranslate"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "OpenAI API key",
+      "group": "authentication",
+      "feel": "optional",
+      "description": "Your OpenAI API key",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "authentication.token"
+      },
+      "constraints": {
+        "notEmpty": true
+      },
+      "value": "{{secrets.OpenAI}}"
+    },
+    {
+      "group": "authentication",
+      "type": "Hidden",
+      "value": "=if is defined(internal_organization) and internal_organization != null then {\"Content-Type\":\"application/json\", \"OpenAI-Organization\":internal_organization} else {\"Content-Type\":\"application/json\"}",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "headers"
+      }
+    },
+    {
+      "label": "Operation",
+      "group": "input",
+      "description": "OpenAI API operation",
+      "type": "Hidden",
+      "id": "operation",
+      "value": "chat",
+      "choices": [
+        {
+          "name": "Chat",
+          "value": "chat"
+        },
+        {
+          "name": "Moderation",
+          "value": "moderation"
+        }
+      ],
+      "binding": {
+        "type": "zeebe:input",
+        "name": "operation"
+      }
+    },
+    {
+      "id": "method",
+      "group": "endpoint",
+      "type": "Hidden",
+      "value": "post",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "method"
+      }
+    },
+    {
+      "group": "endpoint",
+      "type": "Hidden",
+      "value": "https://api.openai.com/v1/chat/completions",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "url"
+      },
+      "condition": {
+        "property": "operation",
+        "equals": "chat"
+      }
+    },
+    {
+      "group": "endpoint",
+      "type": "Hidden",
+      "value": "https://api.openai.com/v1/moderations",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "url"
+      },
+      "condition": {
+        "property": "operation",
+        "equals": "moderation"
+      }
+    },
+    {
+      "label": "Evaluation input",
+      "description": "Provide the text to analyze as static value or variable",
+      "group": "input",
+      "type": "Text",
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "internal_textToAnalyze"
+      },
+      "condition": {
+        "property": "operation",
+        "equals": "moderation"
+      },
+      "constraints": {
+        "notEmpty": true
+      }
+    },
+    {
+      "label": "Model",
+      "description": "Select the model",
+      "group": "input",
+      "type": "Hidden",
+      "value": "gpt-3.5-turbo",
+      "choices": [
+        {
+          "name": "GPT-3.5-turbo",
+          "value": "gpt-3.5-turbo"
+        },
+        {
+          "name": "GPT-4",
+          "value": "gpt-4"
+        }
+      ],
+      "binding": {
+        "type": "zeebe:input",
+        "name": "internal_model"
+      },
+      "condition": {
+        "property": "operation",
+        "equals": "chat"
+      }
+    },
+    {
+      "type": "Hidden",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "internal_prompt"
+      },
+      "condition": {
+        "property": "operation",
+        "equals": "chat"
+      },
+      "constraints": {
+        "notEmpty": true
+      },
+      "value": "=\" Can you translate \"+ text + \" into \" + language"
+    },
+    {
+      "type": "Hidden",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "internal_messages"
+      },
+      "condition": {
+        "property": "operation",
+        "equals": "chat"
+      },
+      "value": "=append(concatenate(if is defined(internal_systemMessage) then [{\"role\": \"system\", \"content\": internal_systemMessage}] else [], if is defined(internal_chatHistory) then internal_chatHistory else []), {\"role\": \"user\", \"content\": internal_prompt})"
+    },
+    {
+      "type": "Hidden",
+      "value": "={\"model\": internal_model, \"messages\": internal_messages, \"n\": number(internal_choices)}",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "body"
+      },
+      "condition": {
+        "property": "operation",
+        "equals": "chat"
+      }
+    },
+    {
+      "type": "Hidden",
+      "value": "={\"input\": internal_textToAnalyze}",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "body"
+      },
+      "condition": {
+        "property": "operation",
+        "equals": "moderation"
+      }
+    },
+    {
+      "label": "Result expression",
+      "description": "Expression to map the response into process variables. Details in the <a href=\"https://docs.camunda.io/docs/components/connectors/use-connectors/#result-expression\" target=\"_blank\">documentation</a>",
+      "group": "output",
+      "type": "Text",
+      "feel": "required",
+      "value": "={translatedText: response.body.choices[1].message.content}",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "resultExpression"
+      }
+    }
+  ]
+}
