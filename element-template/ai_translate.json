@@ -57,7 +57,7 @@
       "feel": "optional",
       "binding": {
         "type": "zeebe:input",
-        "name": "textToTranslate"
+        "name": "text"
       },
       "constraints": {
         "notEmpty": true
@@ -71,7 +71,7 @@
       "feel": "optional",
       "binding": {
         "type": "zeebe:input",
-        "name": "languageToTranslate"
+        "name": "language"
       },
       "constraints": {
         "notEmpty": true
